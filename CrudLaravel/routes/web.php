@@ -34,3 +34,4 @@ Route::get('post','postController@getPosts');
 
 
 Route::resource('grud','StudentsController');
+Route::resource('comment','CommentController');
