@@ -1,5 +1,7 @@
-<a href="{{route('comment.create')}} "><button>Add Comment</button></a>
-<table>
+<link rel="stylesheet" href="../../js/bootstrap.js">
+<link rel="stylesheet" href="../../../public/css/app.css">
+<a class="btn btn-info" href="{{route('comment.create')}} "><button>Add Comment</button></a>
+<table class="table table-dark">
     <tr>
         <th>ID</th>
         <th>Comment</th>

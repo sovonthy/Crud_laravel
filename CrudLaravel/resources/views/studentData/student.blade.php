@@ -1,5 +1,7 @@
+<link rel="stylesheet" href="../../resources/js/bootstrap.js">
+<link rel="stylesheet" href="../../public/css/app.css">
 <a href="{{route('grud.create')}} "><button>Add Student</button></a>
-<table>
+<table class="table table-dark">
     <tr>
         <th>ID</th>
         <th>Firstname</th>

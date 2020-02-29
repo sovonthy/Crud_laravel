@@ -5,7 +5,8 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-
+use App\Profile;
+use App\Post;
 class User extends Authenticatable
 {
     use Notifiable;
@@ -36,4 +37,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+//relationship between model profile and user
+    public function Profile(){
+        return $this->hasOne(Profile::class);
+    }
+    public function Posts(){
+        return $this->hasMany(Post::class);
+    }
 }

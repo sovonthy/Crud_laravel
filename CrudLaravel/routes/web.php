@@ -35,3 +35,12 @@ Route::get('post','postController@getPosts');
 
 Route::resource('grud','StudentsController');
 Route::resource('comment','CommentController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/addprofile', 'UserController@addProfile');
+Route::get('/showprofile', 'UserController@showProfile');
+Route::get('/showAllUser', 'UserController@showAllUser');
+Route::get('/showFormEdit/{id}', 'UserController@showFormEdit')->name('showFormEdit');
+Route::PUT('/editUser/{id}', 'UserController@editUser')->name('editUser');
+Route::resource('posts', 'PostController');
