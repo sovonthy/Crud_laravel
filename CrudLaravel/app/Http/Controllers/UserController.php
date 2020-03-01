@@ -46,6 +46,11 @@ class UserController extends Controller
         $user->save();
         return redirect('showAllUser');
     }
+    public function deleteUser($id){
+        $users = User::find($id);
+        $user->delete();
+        return redirect('showAllUser');
+    }
 
     
 }

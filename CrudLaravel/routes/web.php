@@ -43,4 +43,5 @@ Route::get('/showprofile', 'UserController@showProfile');
 Route::get('/showAllUser', 'UserController@showAllUser');
 Route::get('/showFormEdit/{id}', 'UserController@showFormEdit')->name('showFormEdit');
 Route::PUT('/editUser/{id}', 'UserController@editUser')->name('editUser');
+Route::get('delete/{id}','UserController@deleteUser');
 Route::resource('posts', 'PostController');
