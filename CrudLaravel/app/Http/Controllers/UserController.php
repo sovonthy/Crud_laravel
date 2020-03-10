@@ -48,7 +48,7 @@ class UserController extends Controller
     }
     public function deleteUser($id){
         $users = User::find($id);
-        $user->delete();
+        $users->delete();
         return redirect('showAllUser');
     }
 

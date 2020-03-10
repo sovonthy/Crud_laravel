@@ -29,7 +29,7 @@
         <td>{{$user->Profile->address}}</td>
         <td>
             <a href="{{route('showFormEdit', $user->id)}}">Edit</a>
-            <a href="{{route('', $user->id)}}">Delete</a>
+            <a href="{{route('delete', $user->id)}}">Delete</a>
         </td>
             </tr>
         @endforeach
