@@ -18,7 +18,9 @@
             <th>Email</th>
             <th>Phone</th>
             <th>Address</th>
+            @auth
             <th>Action</th>
+            @endauth
         </tr>
         @foreach ($users as $user)
         <tr>
@@ -27,10 +29,12 @@
         <td>{{$user->email}}</td>
         <td>{{$user->Profile->phone}}</td>
         <td>{{$user->Profile->address}}</td>
+        @auth
         <td>
             <a href="{{route('showFormEdit', $user->id)}}">Edit</a>
             <a href="{{route('delete', $user->id)}}">Delete</a>
         </td>
+        @endauth
             </tr>
         @endforeach
        

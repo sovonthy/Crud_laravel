@@ -7,6 +7,11 @@ use App\User;
 use App\Profile;
 class UserController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth')->except(['showprofile']);
+
+    }
     public function addProfile(){
         $user = User::find(1);
         $profile = new Profile;
